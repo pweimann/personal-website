@@ -13,6 +13,7 @@ import BaseHeader from '@/components/BaseHeader'</script>
   margin: 0;
   padding: 0;
   font-size: 10px;
+  font-family: Roboto, sans-serif;
   box-sizing: border-box;
 }
 
