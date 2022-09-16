@@ -1,7 +1,7 @@
 <template>
-  <div class='wrapper'>
+  <div class="wrapper">
     <header>
-      <slot name='header'>
+      <slot name="header">
         Default header content
       </slot>
     </header>
@@ -9,7 +9,7 @@
       <slot />
     </main>
     <footer>
-      <slot name='footer'>
+      <slot name="footer">
         Default footer content
       </slot>
     </footer>
