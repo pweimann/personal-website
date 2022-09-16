@@ -4,4 +4,7 @@
 </template>
 <script lang='ts'></script>
 <style lang='css'>
+header {
+  min-height: 3rem;
+}
 </style>
