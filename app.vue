@@ -1,9 +1,13 @@
 <template>
-  <div>
-    <BaseHeader></BaseHeader>
+  <NuxtLayout name='default'>
+    <template #header>
+      <BaseHeader />
+    </template>
     <NuxtPage />
-    <BaseFooter></BaseFooter>
-  </div>
+    <template #footer>
+      <BaseFooter />
+    </template>
+  </NuxtLayout>
 </template>
 <script lang='ts' setup>
 import BaseFooter from '@/components/BaseFooter'
@@ -17,4 +21,19 @@ import BaseHeader from '@/components/BaseHeader'</script>
   box-sizing: border-box;
 }
 
+p {
+  font-size: 1.8rem;
+}
+
+h1 {
+  font-size: 7rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+p {
+  margin-top: 1rem;
+}
 </style>

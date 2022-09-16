@@ -5,6 +5,6 @@
 <script lang='ts'></script>
 <style lang='css'>
 header {
-  min-height: 3rem;
+  min-height: 10rem;
 }
 </style>
