@@ -1,9 +1,9 @@
 <template>
   <header>
     <BaseHeaderItem title='Contact' class='ml-auto'>
-      <span>dummy</span>
-      <span>dummy</span>
-      <span>dummy</span>
+      <a href='https://twitter.com/paul__weimann'>
+        <img src='/public/icon-awesome-twitter.svg' alt='twitter' />
+      </a>
     </BaseHeaderItem>
   </header>
 </template>

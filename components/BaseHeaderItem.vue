@@ -40,4 +40,12 @@ defineProps({ title: String })
   margin-top: 3.5rem;
   margin-left: 0.5rem;
 }
+
+.links a,
+.links p,
+.links span,
+.links img {
+  height: 1.4rem;
+  width: 1.4rem;
+}
 </style>
