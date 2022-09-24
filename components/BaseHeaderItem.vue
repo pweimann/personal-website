@@ -25,7 +25,7 @@ defineProps({ title: String })
 
 .title {
   font-size: 1.5rem;
-  font-weight: lighter;
+  font-weight: normal;
   text-transform: uppercase;
   color: black;
   letter-spacing: 0.5rem;
