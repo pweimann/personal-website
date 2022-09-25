@@ -4,6 +4,9 @@
       <a href='https://twitter.com/paul__weimann'>
         <img src='/public/icon-awesome-twitter.svg' alt='twitter' />
       </a>
+      <a href='https://www.instagram.com/bluubsen/'>
+        <img src='/public/icon-awesome-instagram.svg' alt='instagram' />
+      </a>
     </BaseHeaderItem>
   </header>
 </template>
