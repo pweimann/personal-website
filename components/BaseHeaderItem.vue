@@ -48,4 +48,8 @@ defineProps({ title: String })
   height: 1.4rem;
   width: 1.4rem;
 }
+
+.links > a + a {
+  margin-top: 0.3rem;
+}
 </style>
