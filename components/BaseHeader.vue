@@ -2,10 +2,13 @@
   <header>
     <BaseHeaderItem title='Contact' class='ml-auto'>
       <a href='https://twitter.com/paul__weimann'>
-        <img src='/public/icon-awesome-twitter.svg' alt='twitter' />
+        <img src='/icon-awesome-twitter.svg' alt='twitter' />
       </a>
       <a href='https://www.instagram.com/bluubsen/'>
-        <img src='/public/icon-awesome-instagram.svg' alt='instagram' />
+        <img src='/icon-awesome-instagram.svg' alt='instagram' />
+      </a>
+      <a href='https://www.linkedin.com/in/paul-weimann-7b9852207/'>
+        <img src='/icon-awesome-linkedin.svg' alt='linkedin' />
       </a>
     </BaseHeaderItem>
   </header>
@@ -15,7 +18,6 @@ import BaseHeaderItem from '~/components/BaseHeaderItem.vue'</script>
 <style lang='css'>
 header {
   display: flex;
-  height: 10vh;
 }
 
 .ml-auto {
