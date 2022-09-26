@@ -1,13 +1,13 @@
 <template>
-  <div class='wrapper'>
-    <slot name='header'>
+  <div class="wrapper">
+    <slot name="header">
       Default header content
     </slot>
     <main>
       <slot />
     </main>
     <footer>
-      <slot name='footer'>
+      <slot name="footer">
         Default footer content
       </slot>
     </footer>

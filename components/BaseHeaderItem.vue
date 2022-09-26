@@ -1,16 +1,18 @@
 <template>
-  <div class='container' v-bind='$attrs' ref='container'>
-    <div class='vertical-line'></div>
-    <h3 class='title' ref='titleContainer'>{{ title }}</h3>
-    <div class='links'>
-      <slot></slot>
+  <div v-bind="$attrs" ref="container" class="container">
+    <div class="vertical-line" />
+    <h3 ref="titleContainer" class="title">
+      {{ title }}
+    </h3>
+    <div class="links">
+      <slot />
     </div>
   </div>
 </template>
 <script lang='ts' setup>
 import { onMounted, ref } from '#imports'
 
-defineProps({ title: String })
+defineProps({ title: { type: String, default: '' } })
 const titleContainer = ref(null)
 const container = ref(null)
 
