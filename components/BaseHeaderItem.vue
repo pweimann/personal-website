@@ -1,20 +1,31 @@
 <template>
-  <div class='container' v-bind='$attrs'>
+  <div class='container' v-bind='$attrs' ref='container'>
     <div class='vertical-line'></div>
-    <h3 class='title'>{{ title }}</h3>
+    <h3 class='title' ref='titleContainer'>{{ title }}</h3>
     <div class='links'>
       <slot></slot>
     </div>
   </div>
 </template>
 <script lang='ts' setup>
+import { onMounted, ref } from '#imports'
+
 defineProps({ title: String })
+const titleContainer = ref(null)
+const container = ref(null)
+
+onMounted(() => {
+  if (titleContainer) {
+    const titleWidth = titleContainer.value.clientWidth
+    const containerWidth = container.value.clientWidth
+    const calcWidth = titleWidth > containerWidth ? (containerWidth + titleWidth) : containerWidth
+    container.value.style.width = calcWidth + 'px'
+  }
+})
 </script>
 <style lang='css'>
 .container {
   display: flex;
-  height: 100%;
-  width: 15rem;
 }
 
 .vertical-line {
@@ -41,6 +52,15 @@ defineProps({ title: String })
   margin-left: 0.5rem;
 }
 
+a {
+  opacity: 0.15;
+}
+
+a:hover {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
 .links a,
 .links p,
 .links span,
@@ -50,6 +70,6 @@ defineProps({ title: String })
 }
 
 .links > a + a {
-  margin-top: 0.3rem;
+  margin-top: 0.5rem;
 }
 </style>
