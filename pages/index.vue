@@ -13,7 +13,7 @@
     <p>
       Outside of programming, I enjoy reading, learning new stuff, watching UFC, cooking new dishes, and doing a lot of
       sports. Especially I like boxing, squash, running, snowboarding, wakeboarding, and surfing. Doing sport gives me
-      the perfect balance and calm mind.
+      the perfect balance and a calm mind.
     </p>
   </div>
 </template>

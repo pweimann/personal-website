@@ -1,10 +1,8 @@
 <template>
   <div class="wrapper">
-    <header>
-      <slot name="header">
-        Default header content
-      </slot>
-    </header>
+    <slot name="header">
+      Default header content
+    </slot>
     <main>
       <slot />
     </main>
