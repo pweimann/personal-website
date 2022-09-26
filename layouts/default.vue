@@ -1,16 +1,20 @@
 <template>
-  <div class="wrapper">
-    <slot name="header">
-      Default header content
-    </slot>
-    <main>
-      <slot />
-    </main>
-    <footer>
-      <slot name="footer">
-        Default footer content
+  <div>
+    <div class="header-wrapper">
+      <slot name="header">
+        Default header content
       </slot>
-    </footer>
+    </div>
+    <div class="wrapper">
+      <main>
+        <slot />
+      </main>
+      <footer>
+        <slot name="footer">
+          Default footer content
+        </slot>
+      </footer>
+    </div>
   </div>
 </template>
 <style scoped lang='css'>
@@ -21,5 +25,12 @@
   height: 100vh;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .header-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 </style>
