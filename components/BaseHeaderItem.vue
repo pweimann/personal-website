@@ -20,7 +20,7 @@ onMounted(() => {
   if (titleContainer) {
     const titleWidth = titleContainer.value.clientWidth
     const containerWidth = container.value.clientWidth
-    const calcWidth = titleWidth > containerWidth ? (containerWidth + titleWidth) : containerWidth
+    const calcWidth = titleWidth > containerWidth ? titleWidth : containerWidth
     container.value.style.width = calcWidth + 'px'
   }
 })
