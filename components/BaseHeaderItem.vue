@@ -17,17 +17,20 @@ const titleTag = ref(null)
 const container = ref(null)
 
 onMounted(() => {
-  if (titleTag) {
-    const titleWidth = titleTag.value.clientWidth
-    const containerWidth = container.value.clientWidth
-    const calcWidth = titleWidth > containerWidth ? titleWidth : containerWidth
-    container.value.style.width = calcWidth + 'px'
-    // trigger rerender of the title tag
-    // (safari will not update title position otherwise)
-    titleTag.value.style.position = 'absolute'
-    container.value.style.visibility = 'visible'
-  }
+  adaptContainerWidthToTitleWidth()
+  addEventListener('resize', adaptContainerWidthToTitleWidth)
 })
+
+const adaptContainerWidthToTitleWidth = () => {
+  const titleWidth = titleTag.value.clientWidth
+  const containerWidth = container.value.clientWidth
+  const calcWidth = titleWidth > containerWidth ? titleWidth : containerWidth
+  container.value.style.width = calcWidth + 'px'
+  // trigger rerender of the title tag
+  // (safari will not update title position otherwise)
+  titleTag.value.style.position = 'absolute'
+  container.value.style.visibility = 'visible'
+}
 </script>
 <style lang='css'>
 .container {
