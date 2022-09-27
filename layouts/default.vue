@@ -22,7 +22,6 @@
   display: flex;
   flex-direction: column;
   max-width: 1200px;
-  height: 100vh;
   margin: 0 auto;
   padding: 0 2rem;
 }

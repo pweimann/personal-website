@@ -1,5 +1,5 @@
 <template>
-  <div v-if="forceRerender" v-bind="$attrs" ref="container" class="container">
+  <div v-bind="$attrs" ref="container" class="container">
     <div class="vertical-line" />
     <h3 ref="titleTag" class="title">
       {{ title }}
@@ -15,7 +15,6 @@ import { onMounted, ref } from '#imports'
 defineProps({ title: { type: String, default: '' } })
 const titleTag = ref(null)
 const container = ref(null)
-const forceRerender = ref(true)
 
 onMounted(() => {
   if (titleTag) {
@@ -23,15 +22,18 @@ onMounted(() => {
     const containerWidth = container.value.clientWidth
     const calcWidth = titleWidth > containerWidth ? titleWidth : containerWidth
     container.value.style.width = calcWidth + 'px'
-    // set absolute position after container width is calculated
+    // trigger rerender of the title tag
     // (safari will not update title position otherwise)
     titleTag.value.style.position = 'absolute'
+    container.value.style.visibility = 'visible'
   }
 })
 </script>
 <style lang='css'>
 .container {
   display: flex;
+  visibility: hidden;
+  transition: visibility 0.5s ease-in-out;
 }
 
 .vertical-line {
@@ -47,6 +49,7 @@ onMounted(() => {
   color: black;
   letter-spacing: 0.5rem;
   background-color: white;
+  position: fixed;
   top: 10px;
 }
 
