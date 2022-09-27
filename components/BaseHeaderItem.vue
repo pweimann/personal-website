@@ -1,7 +1,7 @@
 <template>
-  <div v-bind="$attrs" ref="container" class="container">
+  <div v-if="forceRerender" v-bind="$attrs" ref="container" class="container">
     <div class="vertical-line" />
-    <h3 ref="titleContainer" class="title">
+    <h3 ref="titleTag" class="title">
       {{ title }}
     </h3>
     <div class="links">
@@ -13,15 +13,19 @@
 import { onMounted, ref } from '#imports'
 
 defineProps({ title: { type: String, default: '' } })
-const titleContainer = ref(null)
+const titleTag = ref(null)
 const container = ref(null)
+const forceRerender = ref(true)
 
 onMounted(() => {
-  if (titleContainer) {
-    const titleWidth = titleContainer.value.clientWidth
+  if (titleTag) {
+    const titleWidth = titleTag.value.clientWidth
     const containerWidth = container.value.clientWidth
     const calcWidth = titleWidth > containerWidth ? titleWidth : containerWidth
     container.value.style.width = calcWidth + 'px'
+    // set absolute position after container width is calculated
+    // (safari will not update title position otherwise)
+    titleTag.value.style.position = 'absolute'
   }
 })
 </script>
@@ -43,7 +47,6 @@ onMounted(() => {
   color: black;
   letter-spacing: 0.5rem;
   background-color: white;
-  position: absolute;
   top: 10px;
 }
 
