@@ -14,7 +14,7 @@ import BaseFooter from '@/components/BaseFooter'
 import BaseHeader from '@/components/BaseHeader'</script>
 <style lang='css'>
 html {
-  font-size: 10px;
+  font-size: calc(10px + 0.15vw);
   font-family: Roboto, sans-serif;
 }
 

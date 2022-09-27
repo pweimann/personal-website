@@ -1,7 +1,7 @@
 <template>
   <div class="about-me">
     <h1>Hello.</h1>
-    <h2>My name is Paul Weimann</h2>
+    <h2>My name is Paul Weimann.</h2>
     <p>
       I am a frontend developer with a love for pixels, currently based in Berlin. This personal website was created to
       share my work, my journey as a developer, and my personal development.
