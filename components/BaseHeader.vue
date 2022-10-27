@@ -1,5 +1,6 @@
 <template>
   <header>
+    <BurgerMenu />
     <BaseHeaderItem title="Contact" class="ml-auto">
       <a href="https://twitter.com/paul__weimann">
         <img src="/icons/icon-awesome-twitter.svg" alt="twitter">
@@ -17,7 +18,8 @@
   </header>
 </template>
 <script lang='ts' setup>
-import BaseHeaderItem from '~/components/BaseHeaderItem.vue'</script>
+import BaseHeaderItem from '~/components/BaseHeaderItem.vue'
+import BurgerMenu from '~/components/BurgerMenu.vue'</script>
 <style lang='css'>
 header {
   display: flex;
