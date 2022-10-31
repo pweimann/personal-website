@@ -23,7 +23,7 @@ const menuWrapperClasses = computed(() => {
 .menu-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .active-menu .line {
