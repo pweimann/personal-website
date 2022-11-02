@@ -1,3 +1,4 @@
+<!--suppress CssUnusedSymbol -->
 <template>
   <header>
     <BurgerMenu class="burger-menu" @click="toggleBurgerMenu" />
@@ -16,7 +17,7 @@
       </NuxtLink>
     </BaseHeaderItem>
     <Transition>
-      <div v-if="showFullHeaderMenu" class="menu-overlay">
+      <div v-if="showFullHeaderMenuState" class="menu-overlay">
         <NuxtLink to="/" class="full-header-menu-link">
           About Me
         </NuxtLink>
@@ -28,14 +29,14 @@
   </header>
 </template>
 <script lang='ts' setup>
+import { useState } from '#app'
 import BaseHeaderItem from '~/components/BaseHeaderItem.vue'
 import BurgerMenu from '~/components/BurgerMenu.vue'
-import { ref } from '#imports'
 
-const showFullHeaderMenu = ref(false)
+const showFullHeaderMenuState = useState<boolean>('showFullHeaderMenuState', () => false)
 
 const toggleBurgerMenu = () => {
-  showFullHeaderMenu.value = !showFullHeaderMenu.value
+  showFullHeaderMenuState.value = !showFullHeaderMenuState.value
 }
 </script>
 <style scoped lang='css'>
