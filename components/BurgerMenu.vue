@@ -13,7 +13,7 @@ import { computed } from '#imports'
 const isMenuToggled = useState('showFullHeaderMenuState')
 
 const menuWrapperClasses = computed(() => {
-  return isMenuToggled.value ? 'active-menu' : ''
+  return isMenuToggled.value ? 'active' : ''
 })
 </script>
 <style scoped lang='css'>
@@ -23,20 +23,20 @@ const menuWrapperClasses = computed(() => {
   justify-content: flex-start;
 }
 
-.active-menu .line {
+.active .line {
   transition: all 0.5s ease;
   background-color: #262626;
 }
 
-.active-menu .menu-btn:hover .line {
+.active .menu-btn:hover .line {
   background-color: white;
 }
 
-.active-menu .line:nth-of-type(1) {
+.active .line:nth-of-type(1) {
   transform: rotate(45deg) translate(0px, 6px);
 }
 
-.active-menu .line:nth-of-type(2) {
+.active .line:nth-of-type(2) {
   transform: rotate(135deg) translate(0px, 6px);
 }
 
