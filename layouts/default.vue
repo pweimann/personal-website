@@ -17,7 +17,7 @@
     </div>
   </div>
 </template>
-<style scoped lang='css'>
+<style lang='css'>
 .wrapper {
   display: flex;
   flex-direction: column;

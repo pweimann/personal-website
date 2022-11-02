@@ -1,29 +1,94 @@
+<!--suppress CssUnusedSymbol -->
 <template>
   <header>
+    <BurgerMenu class="burger-menu" @click="toggleBurgerMenu" />
     <BaseHeaderItem title="Contact" class="ml-auto">
-      <a href="https://twitter.com/paul__weimann">
+      <NuxtLink href="https://twitter.com/paul__weimann" target="_blank">
         <img src="/icons/icon-awesome-twitter.svg" alt="twitter">
-      </a>
-      <a href="https://github.com/pweimann">
+      </NuxtLink>
+      <NuxtLink href="https://github.com/pweimann" target="_blank">
         <img src="/icons/icon-awesome-github.svg" alt="github">
-      </a>
-      <a href="https://www.instagram.com/bluubsen/">
+      </NuxtLink>
+      <NuxtLink href="https://www.instagram.com/bluubsen/" target="_blank">
         <img src="/icons/icon-awesome-instagram.svg" alt="instagram">
-      </a>
-      <a href="https://www.linkedin.com/in/paul-weimann-7b9852207/">
+      </NuxtLink>
+      <NuxtLink href="https://www.linkedin.com/in/paul-weimann-7b9852207/" target="_blank">
         <img src="/icons/icon-awesome-linkedin.svg" alt="linkedin">
-      </a>
+      </NuxtLink>
     </BaseHeaderItem>
+    <Transition>
+      <div v-if="showFullHeaderMenuState" class="menu-overlay">
+        <NuxtLink to="/" class="full-header-menu-link" @click="clickFullHeaderMenuLink">
+          About Me
+        </NuxtLink>
+        <NuxtLink to="/projects" class="full-header-menu-link" @click="clickFullHeaderMenuLink">
+          Projects
+        </NuxtLink>
+      </div>
+    </Transition>
   </header>
 </template>
 <script lang='ts' setup>
-import BaseHeaderItem from '~/components/BaseHeaderItem.vue'</script>
-<style lang='css'>
+import { useState } from '#app'
+import BaseHeaderItem from '~/components/BaseHeaderItem.vue'
+import BurgerMenu from '~/components/BurgerMenu.vue'
+
+const showFullHeaderMenuState = useState<boolean>('showFullHeaderMenuState', () => false)
+
+const toggleBurgerMenu = () => {
+  showFullHeaderMenuState.value = !showFullHeaderMenuState.value
+}
+
+const clickFullHeaderMenuLink = () => {
+  showFullHeaderMenuState.value = false
+}
+</script>
+<style scoped lang='css'>
+.burger-menu {
+  z-index: 20;
+}
+
 header {
   display: flex;
 }
 
 .ml-auto {
   margin-left: auto;
+}
+
+.full-header-menu-link {
+  color: rgba(255, 255, 255);
+  text-decoration: none;
+  font-size: calc(7rem + 1vw);
+}
+
+.menu-overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.15);
+  height: 100vh;
+  width: 100vw;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+.router-link-exact-active {
+  color: white;
+  opacity: 0.5;
 }
 </style>
