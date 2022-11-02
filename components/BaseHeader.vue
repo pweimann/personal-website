@@ -18,10 +18,10 @@
     </BaseHeaderItem>
     <Transition>
       <div v-if="showFullHeaderMenuState" class="menu-overlay">
-        <NuxtLink to="/" class="full-header-menu-link">
+        <NuxtLink to="/" class="full-header-menu-link" @click="clickFullHeaderMenuLink">
           About Me
         </NuxtLink>
-        <NuxtLink to="/projects" class="full-header-menu-link">
+        <NuxtLink to="/projects" class="full-header-menu-link" @click="clickFullHeaderMenuLink">
           Projects
         </NuxtLink>
       </div>
@@ -37,6 +37,10 @@ const showFullHeaderMenuState = useState<boolean>('showFullHeaderMenuState', () 
 
 const toggleBurgerMenu = () => {
   showFullHeaderMenuState.value = !showFullHeaderMenuState.value
+}
+
+const clickFullHeaderMenuLink = () => {
+  showFullHeaderMenuState.value = false
 }
 </script>
 <style scoped lang='css'>
@@ -81,5 +85,11 @@ header {
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
+}
+
+.router-link-exact-active {
+  color: white;
+  opacity: 0.5;
+  text-decoration: underline;
 }
 </style>

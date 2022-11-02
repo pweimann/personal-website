@@ -1,5 +1,5 @@
 <template>
-  <div class="menu-wrapper" :class="menuWrapperClasses" @click="onClick">
+  <div class="menu-wrapper" :class="menuWrapperClasses">
     <div class="menu-btn">
       <div class="line" />
       <div class="line" />
@@ -7,13 +7,10 @@
   </div>
 </template>
 <script setup lang='ts'>
-import { computed, ref } from '#imports'
+import { useState } from '#app'
+import { computed } from '#imports'
 
-const isMenuToggled = ref(false)
-
-const onClick = () => {
-  isMenuToggled.value = !isMenuToggled.value
-}
+const isMenuToggled = useState('showFullHeaderMenuState')
 
 const menuWrapperClasses = computed(() => {
   return isMenuToggled.value ? 'active-menu' : ''
