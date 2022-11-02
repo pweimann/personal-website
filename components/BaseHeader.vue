@@ -90,6 +90,5 @@ header {
 .router-link-exact-active {
   color: white;
   opacity: 0.5;
-  text-decoration: underline;
 }
 </style>
