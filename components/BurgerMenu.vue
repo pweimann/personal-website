@@ -28,16 +28,12 @@ const menuWrapperClasses = computed(() => {
   background-color: #262626;
 }
 
-.active .menu-btn:hover .line {
-  background-color: white;
-}
-
 .active .line:nth-of-type(1) {
-  transform: rotate(45deg) translate(0px, 6px);
+  transform: rotate(45deg) translate(0rem, 0.5rem);
 }
 
 .active .line:nth-of-type(2) {
-  transform: rotate(135deg) translate(0px, 6px);
+  transform: rotate(135deg) translate(0rem, 0.5rem);
 }
 
 .menu-btn {
@@ -61,5 +57,11 @@ const menuWrapperClasses = computed(() => {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .active .menu-btn:hover .line {
+    background-color: white;
+  }
 }
 </style>
