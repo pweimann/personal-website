@@ -1,3 +1,5 @@
+import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   buildModules: [
@@ -5,5 +7,8 @@ export default defineNuxtConfig({
   ],
   googleFonts: {
     Roboto: true
+  },
+  vite: {
+    plugins: [vanillaExtractPlugin()]
   }
 })
