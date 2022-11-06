@@ -18,10 +18,10 @@
     </BaseHeaderItem>
     <Transition>
       <div v-if="showFullHeaderMenuState" class="menu-overlay">
-        <NuxtLink to="/" class="full-header-menu-link" @click="clickFullHeaderMenuLink">
+        <NuxtLink to="/" class="full-header-menu-link glow-effect" @click="clickFullHeaderMenuLink">
           About Me
         </NuxtLink>
-        <NuxtLink to="/projects" class="full-header-menu-link" @click="clickFullHeaderMenuLink">
+        <NuxtLink to="/projects" class="full-header-menu-link glow-effect" @click="clickFullHeaderMenuLink">
           Projects
         </NuxtLink>
       </div>
@@ -62,6 +62,20 @@ header {
   font-size: calc(7rem + 1vw);
 }
 
+.glow-effect:hover {
+  color: #fff;
+  opacity: 1;
+  text-shadow: -0.5px 0 #0fa, 0 0.5px #0fa, 0.5px 0 #0fa, 0 -0.5px #0fa,
+  0 0 3.5px #fff,
+  0 0 5px #fff,
+  0 0 10.5px #fff,
+  0 0 21px #0fa,
+  0 0 41px #0fa,
+  0 0 46px #0fa,
+  0 0 51px #0fa,
+  0 0 75.5px #0fa;
+}
+
 .menu-overlay {
   position: absolute;
   display: flex;
@@ -85,10 +99,5 @@ header {
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
-}
-
-.router-link-exact-active {
-  color: white;
-  opacity: 0.5;
 }
 </style>
