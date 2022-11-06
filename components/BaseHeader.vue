@@ -100,9 +100,4 @@ header {
 .v-leave-to {
   opacity: 0;
 }
-
-.router-link-exact-active {
-  color: white;
-  opacity: 0.5;
-}
 </style>
