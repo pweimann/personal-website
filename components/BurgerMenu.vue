@@ -61,7 +61,17 @@ const menuWrapperClasses = computed(() => {
 
 @media (hover: hover) and (pointer: fine) {
   .active .menu-btn:hover .line {
-    background-color: white;
+    background-color: #fff;
+    opacity: 1;
+    box-shadow: -0.5px 0 #0fa, 0 0.5px #0fa, 0.5px 0 #0fa, 0 -0.5px #0fa,
+    0 0 3.5px #fff,
+    0 0 5px #fff,
+    0 0 10.5px #fff,
+    0 0 21px #0fa,
+    0 0 41px #0fa,
+    0 0 46px #0fa,
+    0 0 51px #0fa,
+    0 0 75.5px #0fa;
   }
 }
 </style>
