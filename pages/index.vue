@@ -22,10 +22,6 @@
   margin-top: 3rem;
 }
 
-.about-me > h2:first-of-type {
-  margin-top: 1rem;
-}
-
 @media screen and (min-width: 800px) {
   .about-me {
     max-width: 60%;

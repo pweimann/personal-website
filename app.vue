@@ -46,10 +46,12 @@ p {
 
 h1 {
   font-size: calc(7rem + 1vw);
+  margin-bottom: 3rem;
 }
 
 h2 {
   font-size: calc(3rem + 1vw);
+  margin-bottom: 1rem;
 }
 
 p {
