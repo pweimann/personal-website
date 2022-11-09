@@ -1,9 +1,8 @@
 <template>
   <div class="projects">
     <ContentList v-slot="{ list }" :query="query">
-      <NuxtLink v-for="project in list" :key="project._path" :to="project._path">
+      <NuxtLink v-for="project in list" :key="project._path" :to="project.link" target="_blank">
         <h2>{{ project.title }}</h2>
-        <p>{{ project.description }}</p>
       </NuxtLink>
     </ContentList>
   </div>
