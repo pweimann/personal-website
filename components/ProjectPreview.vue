@@ -2,7 +2,7 @@
   <div class="project-preview">
     <div class="project-thumbnail-container">
       <NuxtLink :href="props.link" target="_blank" class="project-link">
-        <img class="project-thumbnail" src="/placeholder.gif">
+        <img class="project-thumbnail" :src="props.thumbnail ? props.thumbnail : '/placeholder.gif'">
       </NuxtLink>
     </div>
     <div class="project-text">
@@ -14,6 +14,7 @@
 interface ProjectPreviewItem {
   title: string
   link?: string
+  thumbnail?: string
 }
 
 const props = defineProps<ProjectPreviewItem>()
