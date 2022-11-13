@@ -24,9 +24,6 @@
         <NuxtLink to="/projects" class="full-header-menu-link glow-effect" @click="clickFullHeaderMenuLink">
           Projects
         </NuxtLink>
-        <NuxtLink to="/blog" class="full-header-menu-link glow-effect" @click="clickFullHeaderMenuLink">
-          Blog
-        </NuxtLink>
       </div>
     </Transition>
   </header>

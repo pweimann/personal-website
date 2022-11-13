@@ -1,6 +1,6 @@
 ---
 navigation:
-title: 'Paszkowsky-training a website of a personal trainer'
+title: 'Paszkowsky Training'
 description: ''
 link: 'https://paszkowsky-training.de/'
 ---

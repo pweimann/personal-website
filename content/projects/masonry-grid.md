@@ -1,6 +1,6 @@
 ---
 navigation:
-title: 'Masonry Grid, a fluid masonry grid example'
+title: 'Masonry Grid'
 description: ''
 link: 'https://helpaka.de/'
 ---

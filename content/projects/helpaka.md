@@ -1,6 +1,6 @@
 ---
 navigation:
-title: 'Helpaka a platform for volunteering'
+title: 'Helpaka'
 description: ''
 link: 'https://helpaka.de/'
 ---

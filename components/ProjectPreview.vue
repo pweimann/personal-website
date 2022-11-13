@@ -1,7 +1,14 @@
 <template>
-  <NuxtLink v-bind="$attrs" :href="props.link" target="_blank" class="preview-card">
-    <h2>{{ props.title }}</h2>
-  </NuxtLink>
+  <div class="project-preview">
+    <div class="project-thumbnail-container">
+      <NuxtLink :href="props.link" target="_blank" class="project-link">
+        <img class="project-thumbnail" src="/placeholder.gif">
+      </NuxtLink>
+    </div>
+    <div class="project-text">
+      <h3>{{ props.title }}</h3>
+    </div>
+  </div>
 </template>
 <script setup lang='ts'>
 interface ProjectPreviewItem {
@@ -12,19 +19,34 @@ interface ProjectPreviewItem {
 const props = defineProps<ProjectPreviewItem>()
 </script>
 <style lang='css'>
-a {
+.project-link {
   display: block;
   opacity: 1;
   text-decoration: none;
   color: black;
 }
 
-.preview-card {
-  opacity: 1;
+.project-thumbnail-container {
+  width: 70%;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project-preview {
+  display: flex;
+  flex-basis: 50%;
   width: 100%;
   height: 30rem;
-  color: white;
-  background-color: black;
+}
+
+.project-thumbnail {
+  filter: grayscale(100%);
+  max-width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.project-text {
+  width: 100%;
 }
 
 </style>
