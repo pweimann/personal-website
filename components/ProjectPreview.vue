@@ -20,9 +20,11 @@ a {
 }
 
 .preview-card {
+  opacity: 1;
   width: 100%;
   height: 30rem;
-  background-color: red;
+  color: white;
+  background-color: black;
 }
 
 </style>
