@@ -52,6 +52,10 @@ h2 {
   font-size: calc(3rem + 1vw);
 }
 
+h3 {
+  font-size: calc(2.2rem + 0.7vw);
+}
+
 p {
   margin-top: 1rem;
 }

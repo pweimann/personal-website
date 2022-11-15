@@ -3,6 +3,12 @@ export default defineNuxtConfig({
   buildModules: [
     '@nuxtjs/google-fonts'
   ],
+  modules: [
+    '@nuxt/content'
+  ],
+  content: {
+    // https://content.nuxtjs.org/api/configuration
+  },
   googleFonts: {
     Roboto: true
   }
