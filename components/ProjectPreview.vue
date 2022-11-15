@@ -2,11 +2,17 @@
   <div class="project-preview">
     <div class="project-thumbnail-container">
       <NuxtLink :href="props.link" target="_blank" class="project-link">
-        <img class="project-thumbnail" :src="props.thumbnail ? props.thumbnail : '/placeholder.gif'">
+        <img
+          class="project-thumbnail"
+          :alt="'Thumbnail image of the website - ' + props.title"
+          :src="props.thumbnail ? props.thumbnail : '/placeholder.gif'"
+        >
       </NuxtLink>
     </div>
     <div class="project-text">
-      <h3>{{ props.title }}</h3>
+      <NuxtLink :href="props.link" target="_blank" class="project-link">
+        <h3>{{ props.title }}</h3>
+      </NuxtLink>
     </div>
   </div>
 </template>
