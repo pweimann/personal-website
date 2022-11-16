@@ -11,6 +11,7 @@
 </template>
 <script lang='ts' setup>
 import { useHead } from '#head'
+import { inject } from '@vercel/analytics'
 import BaseFooter from '@/components/BaseFooter'
 import BaseHeader from '@/components/BaseHeader'
 
@@ -27,6 +28,8 @@ useHead({
     lang: 'en'
   }
 })
+
+inject()
 </script>
 <style lang='css'>
 html {
