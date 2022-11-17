@@ -29,7 +29,7 @@ addEventListener('mousemove', moveCursor)
   top: 0;
   left: 0;
   border-radius: 50%;
-  z-index: 0;
+  z-index: 1000;
   pointer-events: none;
   color: #fff;
   will-change: transform;
