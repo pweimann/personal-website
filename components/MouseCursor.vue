@@ -9,8 +9,10 @@ const xCursor = ref(0)
 const yCursor = ref(0)
 
 const moveCursor = (event: MouseEvent) => {
-  xCursor.value = event.clientX
-  yCursor.value = event.clientY
+  setTimeout(() => {
+    xCursor.value = event.clientX
+    yCursor.value = event.clientY
+  }, 100)
 }
 
 const cursorPoint = computed(() => {
@@ -26,12 +28,13 @@ addEventListener('mousemove', moveCursor)
   position: fixed;
   top: 0;
   left: 0;
-  border-radius: 100%;
+  border-radius: 50%;
+  z-index: 0;
   pointer-events: none;
   color: #fff;
-  will-change: opacity, transform;
+  will-change: transform;
 
   background-color: #fff;
-  opacity: 1;
+  box-shadow: 0 0 0.4rem 0.2rem #fff, /* inner white */ 0 0 0.7rem 0.35rem #f0f, /* middle magenta */ 0 0 1.2rem 0.6rem #0ff; /* outer cyan */
 }
 </style>
