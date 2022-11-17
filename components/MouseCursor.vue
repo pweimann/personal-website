@@ -35,6 +35,6 @@ addEventListener('mousemove', moveCursor)
   will-change: transform;
 
   background-color: #fff;
-  box-shadow: 0 0 0.4rem 0.2rem #fff, /* inner white */ 0 0 0.7rem 0.35rem #f0f, /* middle magenta */ 0 0 1.2rem 0.6rem #0ff; /* outer cyan */
+  box-shadow: 0 0 0.8rem 0.4rem rgba(255, 255, 255, 0.4), 0 0 4rem 2rem rgba(255, 255, 255, 0.3), 0 0 10rem 5rem rgba(255, 255, 255, 0.2);
 }
 </style>
