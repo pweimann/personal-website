@@ -87,7 +87,7 @@ header {
   z-index: 10;
   top: 0;
   left: 0;
-  background-color: black;
+  background-color: var(--main-dark-bg-color);
   color: rgba(255, 255, 255, 0.15);
   height: 100vh;
   width: 100vw;
