@@ -34,6 +34,7 @@ inject()
 <style lang='css'>
 :root {
   --main-dark-bg-color: black;
+  --highlight-bg-color: #0fa;
 }
 
 html {

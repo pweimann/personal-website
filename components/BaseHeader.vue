@@ -67,15 +67,15 @@ header {
 .glow-effect:hover {
   color: #fff;
   opacity: 1;
-  text-shadow: -0.5px 0 #0fa, 0 0.5px #0fa, 0.5px 0 #0fa, 0 -0.5px #0fa,
+  text-shadow: -0.5px 0 var(--highlight-bg-color), 0 0.5px var(--highlight-bg-color), 0.5px 0 var(--highlight-bg-color), 0 -0.5px var(--highlight-bg-color),
   0 0 0.5px #fff,
   0 0 1.25px #fff,
   0 0 2.5px #fff,
-  0 0 5px #0fa,
-  0 0 10px #0fa,
-  0 0 11.5px #0fa,
-  0 0 22px #0fa,
-  0 0 26.5px #0fa;
+  0 0 5px var(--highlight-bg-color),
+  0 0 10px var(--highlight-bg-color),
+  0 0 11.5px var(--highlight-bg-color),
+  0 0 22px var(--highlight-bg-color),
+  0 0 26.5px var(--highlight-bg-color);
 }
 
 .menu-overlay {
