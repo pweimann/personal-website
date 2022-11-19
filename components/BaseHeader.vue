@@ -18,6 +18,7 @@
     </BaseHeaderItem>
     <Transition>
       <div v-if="showFullHeaderMenuState" class="menu-overlay">
+        <MouseCursor />
         <NuxtLink to="/" class="full-header-menu-link glow-effect" @click="clickFullHeaderMenuLink">
           About Me
         </NuxtLink>
@@ -32,6 +33,7 @@
 import { useState } from '#app'
 import BaseHeaderItem from '~/components/BaseHeaderItem.vue'
 import BurgerMenu from '~/components/BurgerMenu.vue'
+import MouseCursor from '~/components/CursorPoint.vue'
 
 const showFullHeaderMenuState = useState<boolean>('showFullHeaderMenuState', () => false)
 
@@ -66,14 +68,14 @@ header {
   color: #fff;
   opacity: 1;
   text-shadow: -0.5px 0 #0fa, 0 0.5px #0fa, 0.5px 0 #0fa, 0 -0.5px #0fa,
-  0 0 3.5px #fff,
-  0 0 5px #fff,
-  0 0 10.5px #fff,
-  0 0 21px #0fa,
-  0 0 41px #0fa,
-  0 0 46px #0fa,
-  0 0 51px #0fa,
-  0 0 75.5px #0fa;
+  0 0 0.5px #fff,
+  0 0 1.25px #fff,
+  0 0 2.5px #fff,
+  0 0 5px #0fa,
+  0 0 10px #0fa,
+  0 0 11.5px #0fa,
+  0 0 22px #0fa,
+  0 0 26.5px #0fa;
 }
 
 .menu-overlay {
