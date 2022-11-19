@@ -33,7 +33,7 @@
 import { useState } from '#app'
 import BaseHeaderItem from '~/components/BaseHeaderItem.vue'
 import BurgerMenu from '~/components/BurgerMenu.vue'
-import MouseCursor from '~/components/MouseCursor.vue'
+import MouseCursor from '~/components/CursorPoint.vue'
 
 const showFullHeaderMenuState = useState<boolean>('showFullHeaderMenuState', () => false)
 
