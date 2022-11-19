@@ -33,8 +33,8 @@ inject()
 </script>
 <style lang='css'>
 :root {
-  --main-dark-bg-color: black;
-  --highlight-bg-color: #0fa;
+  --main-dark-bg-color: #000;
+  --highlight-bg-color: #4AD9C1;
 }
 
 html {

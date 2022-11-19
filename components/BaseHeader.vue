@@ -66,7 +66,7 @@ header {
 
 .text-shadow-glow-effect:hover {
   color: #fff;
-  opacity: 1;
+  opacity: 0.7;
   text-shadow: -0.5px 0 var(--highlight-bg-color), 0 0.5px var(--highlight-bg-color), 0.5px 0 var(--highlight-bg-color), 0 -0.5px var(--highlight-bg-color),
   0 0 0.5px #fff,
   0 0 1.25px #fff,
