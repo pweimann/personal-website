@@ -10,6 +10,9 @@ export default defineNuxtConfig({
     // https://content.nuxtjs.org/api/configuration
   },
   googleFonts: {
-    Roboto: true
+    families: {
+      Roboto: true,
+      Geramond: true
+    }
   }
 })
