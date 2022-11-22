@@ -11,8 +11,8 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      Roboto: true,
-      Geramond: true
+      Geramond: true,
+      Futura: true
     }
   }
 })

@@ -39,7 +39,7 @@ inject()
 
 html {
   font-size: calc(10px + 0.15vw);
-  font-family: Geramond, Roboto, sans-serif;
+  font-family: Futura, Geramond, Helvetica, sans-serif;
 }
 
 * {
