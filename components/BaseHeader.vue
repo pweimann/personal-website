@@ -19,10 +19,18 @@
     <Transition>
       <div v-if="showFullHeaderMenuState" class="menu-overlay">
         <MouseCursor />
-        <NuxtLink to="/" class="full-header-menu-link text-shadow-glow-effect" @click="clickFullHeaderMenuLink">
+        <NuxtLink
+          to="/"
+          class="full-header-menu-link text-shadow-glow-effect hidden-cursor"
+          @click="clickFullHeaderMenuLink"
+        >
           About Me
         </NuxtLink>
-        <NuxtLink to="/projects" class="full-header-menu-link text-shadow-glow-effect" @click="clickFullHeaderMenuLink">
+        <NuxtLink
+          to="/projects"
+          class="full-header-menu-link text-shadow-glow-effect hidden-cursor"
+          @click="clickFullHeaderMenuLink"
+        >
           Projects
         </NuxtLink>
       </div>
@@ -59,6 +67,7 @@ header {
 }
 
 .full-header-menu-link {
+  cursor: none;
   color: rgba(255, 255, 255);
   text-decoration: none;
   font-size: calc(7rem + 1vw);
@@ -79,6 +88,7 @@ header {
 }
 
 .menu-overlay {
+  cursor: none;
   position: absolute;
   display: flex;
   flex-direction: column;

@@ -1,6 +1,6 @@
 <template>
   <div class="menu-wrapper" :class="menuWrapperClasses">
-    <div class="menu-btn">
+    <div class="menu-btn" :class="{'hidden-cursor': isMenuToggled}">
       <div class="line" />
       <div class="line" />
     </div>
@@ -40,6 +40,10 @@ const menuWrapperClasses = computed(() => {
   position: relative;
   cursor: pointer;
   padding: 4rem 2rem;
+}
+
+.hidden-cursor {
+  cursor: none;
 }
 
 .line {
