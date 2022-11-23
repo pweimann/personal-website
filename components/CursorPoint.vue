@@ -9,28 +9,15 @@ const xCursor = ref(0)
 const yCursor = ref(0)
 
 const moveCursor = (event: MouseEvent) => {
-  setTimeout(() => {
+  requestAnimationFrame(() => {
     xCursor.value = event.clientX
     yCursor.value = event.clientY
-  }, 1)
+  })
 }
 
 const cursorPoint = computed(() => {
   return `transform: translateX(${xCursor.value - 2}px) translateY(${yCursor.value - 2}px) translateZ(0) translate3d(0, 0, 0)`
 })
-
-// const isCursorVisible = (computed(() => {
-//   return cursor.value?.style.display !== 'none'
-// }))
-//
-// watch(isCursorVisible, (currentValue) => {
-//   debugger
-//   const body = document.getElementsByTagName('body').item(0)
-//   if (!body) {
-//     return
-//   }
-//   body.style.cursor = currentValue ? 'none' : 'auto'
-// })
 
 addEventListener('mousemove', moveCursor)
 </script>
