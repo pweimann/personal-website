@@ -26,8 +26,8 @@ addEventListener('mousemove', moveCursor)
   height: 0.5rem;
   width: 0.5rem;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: -100px;
+  left: -100px;
   border-radius: 50%;
   z-index: -10;
   pointer-events: none;
