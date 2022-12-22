@@ -1,9 +1,7 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  buildModules: [
-    '@nuxtjs/google-fonts'
-  ],
   modules: [
+    '@nuxtjs/google-fonts',
     '@nuxt/content'
   ],
   content: {
@@ -11,8 +9,7 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      Geramond: true,
-      Futura: true
+      Roboto: true
     }
   }
 })
