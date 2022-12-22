@@ -1,22 +1,21 @@
 <template>
-  <div ref="cursor" class="mouse-cursor" :style="cursorPoint" />
+  <div class="mouse-cursor" :style="cursorPoint" />
 </template>
 <script setup lang='ts'>
 import { computed, ref } from '#imports'
 
-const cursor = ref<HTMLInputElement | null>(null)
 const xCursor = ref(0)
 const yCursor = ref(0)
 
 const moveCursor = (event: MouseEvent) => {
-  setTimeout(() => {
+  requestAnimationFrame(() => {
     xCursor.value = event.clientX
     yCursor.value = event.clientY
-  }, 100)
+  })
 }
 
 const cursorPoint = computed(() => {
-  return `transform: translateX(${xCursor.value - 2}px) translateY(${yCursor.value - 2}px) translateZ(0) translate3d(0, 0, 0)`
+  return `transform: translateX(${xCursor.value}px) translateY(${yCursor.value}px) translateZ(0) translate3d(0, 0, 0)`
 })
 
 addEventListener('mousemove', moveCursor)

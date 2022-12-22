@@ -19,10 +19,18 @@
     <Transition>
       <div v-if="showFullHeaderMenuState" class="menu-overlay">
         <MouseCursor />
-        <NuxtLink to="/" class="full-header-menu-link glow-effect" @click="clickFullHeaderMenuLink">
+        <NuxtLink
+          to="/"
+          class="full-header-menu-link text-shadow-glow-effect hidden-cursor"
+          @click="clickFullHeaderMenuLink"
+        >
           About Me
         </NuxtLink>
-        <NuxtLink to="/projects" class="full-header-menu-link glow-effect" @click="clickFullHeaderMenuLink">
+        <NuxtLink
+          to="/projects"
+          class="full-header-menu-link text-shadow-glow-effect hidden-cursor"
+          @click="clickFullHeaderMenuLink"
+        >
           Projects
         </NuxtLink>
       </div>
@@ -44,6 +52,14 @@ const toggleBurgerMenu = () => {
 const clickFullHeaderMenuLink = () => {
   showFullHeaderMenuState.value = false
 }
+
+watch(showFullHeaderMenuState, (current) => {
+  if (current) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = 'initial'
+  }
+})
 </script>
 <style scoped lang='css'>
 .burger-menu {
@@ -59,26 +75,28 @@ header {
 }
 
 .full-header-menu-link {
+  cursor: none;
   color: rgba(255, 255, 255);
   text-decoration: none;
   font-size: calc(7rem + 1vw);
 }
 
-.glow-effect:hover {
+.text-shadow-glow-effect:hover {
   color: #fff;
-  opacity: 1;
-  text-shadow: -0.5px 0 #0fa, 0 0.5px #0fa, 0.5px 0 #0fa, 0 -0.5px #0fa,
+  opacity: 0.7;
+  text-shadow: -0.5px 0 var(--highlight-bg-color), 0 0.5px var(--highlight-bg-color), 0.5px 0 var(--highlight-bg-color), 0 -0.5px var(--highlight-bg-color),
   0 0 0.5px #fff,
   0 0 1.25px #fff,
   0 0 2.5px #fff,
-  0 0 5px #0fa,
-  0 0 10px #0fa,
-  0 0 11.5px #0fa,
-  0 0 22px #0fa,
-  0 0 26.5px #0fa;
+  0 0 5px var(--highlight-bg-color),
+  0 0 10px var(--highlight-bg-color),
+  0 0 11.5px var(--highlight-bg-color),
+  0 0 22px var(--highlight-bg-color),
+  0 0 26.5px var(--highlight-bg-color);
 }
 
 .menu-overlay {
+  cursor: none;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -87,10 +105,11 @@ header {
   z-index: 10;
   top: 0;
   left: 0;
-  background-color: black;
+  background-color: var(--main-dark-bg-color);
   color: rgba(255, 255, 255, 0.15);
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 .v-enter-active,

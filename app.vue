@@ -32,9 +32,14 @@ useHead({
 inject()
 </script>
 <style lang='css'>
+:root {
+  --main-dark-bg-color: #000;
+  --highlight-bg-color: #0fa;
+}
+
 html {
   font-size: calc(10px + 0.15vw);
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Helvetica, sans-serif;
 }
 
 * {

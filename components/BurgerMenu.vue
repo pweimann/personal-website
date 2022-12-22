@@ -1,6 +1,6 @@
 <template>
   <div class="menu-wrapper" :class="menuWrapperClasses">
-    <div class="menu-btn">
+    <div class="menu-btn" :class="{'hidden-cursor': isMenuToggled}">
       <div class="line" />
       <div class="line" />
     </div>
@@ -42,6 +42,10 @@ const menuWrapperClasses = computed(() => {
   padding: 4rem 2rem;
 }
 
+.hidden-cursor {
+  cursor: none;
+}
+
 .line {
   transition: all 0.5s ease;
   background-color: black;
@@ -63,15 +67,15 @@ const menuWrapperClasses = computed(() => {
   .active .menu-btn:hover .line {
     background-color: #fff;
     opacity: 1;
-    box-shadow: -0.5px 0 #0fa, 0 0.5px #0fa, 0.5px 0 #0fa, 0 -0.5px #0fa,
+    box-shadow: -0.5px 0 var(--highlight-bg-color), 0 0.5px var(--highlight-bg-color), 0.5px 0 var(--highlight-bg-color), 0 -0.5px var(--highlight-bg-color),
     0 0 3.5px #fff,
     0 0 5px #fff,
     0 0 10.5px #fff,
-    0 0 21px #0fa,
-    0 0 41px #0fa,
-    0 0 46px #0fa,
-    0 0 51px #0fa,
-    0 0 75.5px #0fa;
+    0 0 21px var(--highlight-bg-color),
+    0 0 41px var(--highlight-bg-color),
+    0 0 46px var(--highlight-bg-color),
+    0 0 51px var(--highlight-bg-color),
+    0 0 75.5px var(--highlight-bg-color);
   }
 }
 </style>
