@@ -1,19 +1,23 @@
 <template>
   <div class="about-me">
     <h1>Hello.</h1>
-    <h2>My name is Paul Weimann.</h2>
+    <h2>My name is Paul Weimann,</h2>
     <p>
-      I am a frontend developer with a love for pixels, currently based in Berlin. This personal website was created to
-      share my work, my journey as a developer, and my personal development.
+      and I am a frontend developer based in Berlin. I am passionate about creating beautiful and functional interfaces,
+      and I am constantly striving to improve my skills and knowledge.
     </p>
     <p>
-      You can follow me on Twitter where I mostly tweet about my life and what currently impresses me. If you want to
-      get in touch with me, you can write me on my social accounts. I'm looking forward to hearing from you! :)
+      On this personal website, I share my work, my experiences as a developer, and my ongoing journey of personal
+      growth. You can also follow me on Twitter, where I often tweet about my interests, projects, and inspirations.
     </p>
     <p>
-      Outside of programming, I enjoy reading, learning new stuff, watching UFC, cooking new dishes, and doing a lot of
-      sports. Especially I like boxing, squash, running, snowboarding, wakeboarding, and surfing. Doing sport gives me
-      the perfect balance and a calm mind.
+      When I'm not coding, I enjoy a variety of activities such as reading, learning, watching UFC, and trying new
+      recipes. I am also an avid sports enthusiast, and I particularly enjoy boxing, squash, running, snowboarding,
+      wakeboarding, and surfing. These activities keep me active, focused, and balanced.
+    </p>
+    <p>
+      If you would like to get in touch with me, please feel free to reach out through my social accounts. I look
+      forward to hearing from you! :)
     </p>
   </div>
 </template>
