@@ -52,6 +52,14 @@ const toggleBurgerMenu = () => {
 const clickFullHeaderMenuLink = () => {
   showFullHeaderMenuState.value = false
 }
+
+watch(showFullHeaderMenuState, (current) => {
+  if (current) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = 'initial'
+  }
+})
 </script>
 <style scoped lang='css'>
 .burger-menu {
@@ -101,6 +109,7 @@ header {
   color: rgba(255, 255, 255, 0.15);
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 .v-enter-active,
